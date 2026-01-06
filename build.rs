@@ -65,114 +65,10 @@ fn main() {
             && !line.starts_with("- description")
         {
             // Push pending
-            if let Some(s) = current_sig.take() {
-                if let Some(bytes) = s.bytes {
-                    if bytes.len() >= 2 {
-                        // Filter short
-                        if let Some(entry) = entries.iter_mut().find(|e| {
-                            e.ext == current_ext && e.category_mime == current_category_mime
-                        }) {
-                            entry.signatures.push(SigData {
-                                bytes,
-                                offset: s.offset,
-                                description: s.description,
-                                hexdump_str: s.hexdump_str,
-                            });
-                        } else {
-                            entries.push(Entry {
-                                ext: current_ext.clone(),
-                                category_mime: current_category_mime.clone(),
-                                signatures: vec![SigData {
-                                    bytes,
-                                    offset: s.offset,
-                                    description: s.description,
-                                    hexdump_str: s.hexdump_str,
-                                }],
-                            });
-                        }
-                    }
-                }
-            }
-
-            let key = line.trim_end_matches(':');
-            if let Some(mime) = category_map.get(key) {
-                current_category_mime = mime.to_string();
-            } else if key.starts_with('.') {
-                current_ext = key.to_string();
-            }
-        } else if line.starts_with("- description:") {
-            // Push pending
-            if let Some(s) = current_sig.take() {
-                if let Some(bytes) = s.bytes {
-                    if bytes.len() >= 2 {
-                        if let Some(entry) = entries.iter_mut().find(|e| {
-                            e.ext == current_ext && e.category_mime == current_category_mime
-                        }) {
-                            entry.signatures.push(SigData {
-                                bytes,
-                                offset: s.offset,
-                                description: s.description,
-                                hexdump_str: s.hexdump_str,
-                            });
-                        } else {
-                            entries.push(Entry {
-                                ext: current_ext.clone(),
-                                category_mime: current_category_mime.clone(),
-                                signatures: vec![SigData {
-                                    bytes,
-                                    offset: s.offset,
-                                    description: s.description,
-                                    hexdump_str: s.hexdump_str,
-                                }],
-                            });
-                        }
-                    }
-                }
-            }
-
-            let desc = line
-                .trim_start_matches("- description:")
-                .trim()
-                .trim_matches('"')
-                .to_string();
-            let desc_escaped = desc.replace("\"", "\\\"");
-
-            current_sig = Some(PendingSig {
-                bytes: None,
-                offset: 0,
-                description: desc_escaped,
-                hexdump_str: String::new(),
-            });
-        } else if line.starts_with("hexdump:") {
-            if let Some(s) = current_sig.as_mut() {
-                if let Some(start) = line.find('"') {
-                    if let Some(end) = line.rfind('"') {
-                        if end > start {
-                            let hex_str = &line[start + 1..end];
-                            s.hexdump_str = hex_str.to_string();
-                            let bytes: Vec<u8> = hex_str
-                                .split_whitespace()
-                                .filter_map(|s| u8::from_str_radix(s, 16).ok())
-                                .collect();
-                            s.bytes = Some(bytes);
-                        }
-                    }
-                }
-            }
-        } else if line.starts_with("offset:") {
-            if let Some(s) = current_sig.as_mut() {
-                if let Some(val_str) = line.strip_prefix("offset:").map(|s| s.trim()) {
-                    if let Ok(val) = val_str.parse::<usize>() {
-                        s.offset = val;
-                    }
-                }
-            }
-        }
-    }
-    // Push final
-    if let Some(s) = current_sig.take() {
-        if let Some(bytes) = s.bytes {
-            if bytes.len() >= 2 {
+            if let Some(s) = current_sig.take()
+                && let Some(bytes) = s.bytes
+                && bytes.len() >= 2
+            {
                 if let Some(entry) = entries
                     .iter_mut()
                     .find(|e| e.ext == current_ext && e.category_mime == current_category_mime)
@@ -196,6 +92,104 @@ fn main() {
                     });
                 }
             }
+
+            let key = line.trim_end_matches(':');
+            if let Some(mime) = category_map.get(key) {
+                current_category_mime = mime.to_string();
+            } else if key.starts_with('.') {
+                current_ext = key.to_string();
+            }
+        } else if line.starts_with("- description:") {
+            // Push pending
+            if let Some(s) = current_sig.take()
+                && let Some(bytes) = s.bytes
+                && bytes.len() >= 2
+            {
+                if let Some(entry) = entries
+                    .iter_mut()
+                    .find(|e| e.ext == current_ext && e.category_mime == current_category_mime)
+                {
+                    entry.signatures.push(SigData {
+                        bytes,
+                        offset: s.offset,
+                        description: s.description,
+                        hexdump_str: s.hexdump_str,
+                    });
+                } else {
+                    entries.push(Entry {
+                        ext: current_ext.clone(),
+                        category_mime: current_category_mime.clone(),
+                        signatures: vec![SigData {
+                            bytes,
+                            offset: s.offset,
+                            description: s.description,
+                            hexdump_str: s.hexdump_str,
+                        }],
+                    });
+                }
+            }
+
+            let desc = line
+                .trim_start_matches("- description:")
+                .trim()
+                .trim_matches('"')
+                .to_string();
+            let desc_escaped = desc.replace("\"", "\\\"");
+
+            current_sig = Some(PendingSig {
+                bytes: None,
+                offset: 0,
+                description: desc_escaped,
+                hexdump_str: String::new(),
+            });
+        } else if line.starts_with("hexdump:") {
+            if let Some(s) = current_sig.as_mut()
+                && let Some(start) = line.find('"')
+                && let Some(end) = line.rfind('"')
+                && end > start
+            {
+                let hex_str = &line[start + 1..end];
+                s.hexdump_str = hex_str.to_string();
+                let bytes: Vec<u8> = hex_str
+                    .split_whitespace()
+                    .filter_map(|s| u8::from_str_radix(s, 16).ok())
+                    .collect();
+                s.bytes = Some(bytes);
+            }
+        } else if line.starts_with("offset:")
+            && let Some(s) = current_sig.as_mut()
+            && let Some(val_str) = line.strip_prefix("offset:").map(|s| s.trim())
+            && let Ok(val) = val_str.parse::<usize>()
+        {
+            s.offset = val;
+        }
+    }
+    // Push final
+    if let Some(s) = current_sig.take()
+        && let Some(bytes) = s.bytes
+        && bytes.len() >= 2
+    {
+        if let Some(entry) = entries
+            .iter_mut()
+            .find(|e| e.ext == current_ext && e.category_mime == current_category_mime)
+        {
+            entry.signatures.push(SigData {
+                bytes,
+                offset: s.offset,
+                description: s.description,
+                hexdump_str: s.hexdump_str,
+            });
+        } else {
+            entries.push(Entry {
+                ext: current_ext.clone(),
+                category_mime: current_category_mime.clone(),
+                signatures: vec![SigData {
+                    bytes,
+                    offset: s.offset,
+                    description: s.description,
+                    hexdump_str: s.hexdump_str,
+                }],
+            });
         }
     }
 
@@ -210,7 +204,7 @@ fn main() {
     output.push('\n');
     output.push_str("    pub hexdump: &'static str,");
     output.push('\n');
-    output.push_str("}");
+    output.push('}');
     output.push('\n');
     output.push('\n');
 
@@ -231,7 +225,9 @@ fn main() {
             format!("{} archive", entry.ext)
         };
 
-        if let Some((existing_mime, _)) = ext_to_info.get(&entry.ext) {
+        let ext_lower = entry.ext.to_lowercase();
+
+        if let Some((existing_mime, _)) = ext_to_info.get(&ext_lower) {
             let old_p = priority
                 .iter()
                 .position(|&p| p == existing_mime)
@@ -241,10 +237,10 @@ fn main() {
                 .position(|&p| p == entry.category_mime)
                 .unwrap_or(999);
             if new_p < old_p {
-                ext_to_info.insert(entry.ext.clone(), (entry.category_mime.clone(), desc));
+                ext_to_info.insert(ext_lower, (entry.category_mime.clone(), desc));
             }
         } else {
-            ext_to_info.insert(entry.ext.clone(), (entry.category_mime.clone(), desc));
+            ext_to_info.insert(ext_lower, (entry.category_mime.clone(), desc));
         }
     }
 
@@ -266,7 +262,7 @@ fn main() {
     output.push('\n');
     output.push_str("    }");
     output.push('\n');
-    output.push_str("}");
+    output.push('}');
     output.push('\n');
     output.push('\n');
 
@@ -336,7 +332,7 @@ fn main() {
 
     output.push_str("    None");
     output.push('\n');
-    output.push_str("}");
+    output.push('}');
     output.push('\n');
 
     fs::write(&dest_path, output).unwrap();

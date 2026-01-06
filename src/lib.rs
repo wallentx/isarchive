@@ -71,7 +71,7 @@ mod tests {
             "Category should contain 'archive'"
         );
         assert!(
-            info.description.len() > 0,
+            !info.description.is_empty(),
             "Description should not be empty"
         );
     }

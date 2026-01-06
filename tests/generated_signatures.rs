@@ -60,11 +60,7 @@ fn test_all_signatures_generated() {
                     // Use a generic extension to force Magic detection, NOT extension detection
                     // We append the original extension to the filename for debugging visibility,
                     // but end with .bin or .tmp
-                    let safe_ext = if ext.starts_with('.') {
-                        &ext[1..]
-                    } else {
-                        &ext
-                    };
+                    let safe_ext = ext.strip_prefix('.').unwrap_or(&ext);
                     let filename = format!("{}_{}_{}.bin", category, safe_ext, i);
                     let file_path = test_dir.join(&filename);
 
