@@ -45,7 +45,7 @@ Add `isarchive` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-isarchive = { git = "https://github.com/yourusername/isarchive.git" }
+isarchive = { git = "https://github.com/wallentx/isarchive.git" }
 ```
 
 Use the `analyze` function in your code:
