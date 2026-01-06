@@ -1,0 +1,1139 @@
+archiveOnly:
+  .a:
+    signatures:
+      - description: "ar ( ) archive thin"
+        hexdump: "21 3C 74 68 69 6E 3E"
+      - description: "ar archive"
+        hexdump: "21 3C 61 72 63 68 3E"
+      - description: "Binding of Isaac Rebirth packed Archive"
+        hexdump: "41 52 43 48 30 30 30"
+      - description: "BSD library"
+        hexdump: "21 3C 61 72 63 68 3E 0A"
+      - description: "( ) Common Object File Format COFF Library"
+        hexdump: "21 3C 61 72 63 68 3E 0A 2F 20 20 20 20 20 20 20"
+      - description: "Go (Win-64) (v1.x) package"
+        hexdump: "21 3C 61 72 63 68 3E 0A 5F 5F 2E 50 4B 47 44 45"
+      - description: "PA- RISC relocatable library"
+        hexdump: "21 3C 61 72 63 68 3E 0A 2F 20 20 20 20 20 20 20"
+      - description: "V 64-bit System library"
+        hexdump: "21 3C 61 72 63 68 3E 0A 2F 53 59 4D 36 34 2F 20"
+  .ar:
+    signatures:
+      - description: "AIX (AIX to v4.3) Small indexed archive prior"
+        hexdump: "3C 61 69 61 66 66 3E 0D"
+      - description: "ar ( ) archive thin"
+        hexdump: "21 3C 74 68 69 6E 3E"
+      - description: "ar archive"
+        hexdump: "21 3C 61 72 63 68 3E"
+      - description: "Big 2 Mutha Truckers game data Archive"
+        hexdump: "41 52 43 43"
+      - description: "2 Midtown Madness game data archive"
+        hexdump: "44 41 56 45"
+      - description: "Midtown Madness game data archive"
+        hexdump: "41 52 45 53"
+      - description: "PR archiving tool archive"
+        hexdump: "41 52 0D"
+  .cpio:
+    signatures:
+      - description: "( ) CPIO archive binary"
+        hexdump: "C7 71"
+      - description: "( ) CPIO archive byte swapped binary"
+        hexdump: "71 C7"
+      - description: "( new) CPIO archive portable"
+        hexdump: "30 37 30 37 30 31"
+      - description: "( old) CPIO archive portable"
+        hexdump: "30 37 30 37 30 37"
+      - description: "( CRC) CPIO archive portable with"
+        hexdump: "30 37 30 37 30 32"
+      - description: "( ) CPIO archive portable"
+        hexdump: "30 37 30 37 30"
+  .shar:
+    signatures:
+      - description: "- (var.2) shar SHell self extracting aRchive"
+        hexdump: "23 20 54 6F 20 75 6E 62 75 6E 64 6C 65 2C 20 73"
+      - description: "- (var.3) shar SHell self extracting aRchive"
+        hexdump: "23 20 73 68 61 72"
+      - description: "- shar SHell self extracting aRchive"
+        hexdump: "23 21"
+  .iso:
+    signatures:
+      - description: "Map (APM) Apple Partition disk image"
+        hexdump: "45 52"
+      - description: "ISO 9660 Volume Descriptor"
+        hexdump: "43 44 30 30 31"
+        offset: 32769
+  .lbr:
+    signatures:
+      - description: "ar ( ) archive thin"
+        hexdump: "21 3C 74 68 69 6E 3E"
+      - description: "ar archive"
+        hexdump: "21 3C 61 72 63 68 3E"
+      - description: "C64 LiBRary container"
+        hexdump: "44 57 42 20"
+      - description: "(XML) EAGLE Library"
+        hexdump: "3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31"
+      - description: "EAGLE Library"
+        hexdump: "10"
+      - description: "LU library"
+        hexdump: "00 20 20 20 20 20 20 20 20 20 20 20 00 00"
+      - description: "Micro Focus COBOL Library"
+        hexdump: "4D 69 63 72 6F 20 46 6F 63 75 73 20 43 4F 42 4F"
+      - description: "VS Micro Focus Cobol library"
+        hexdump: "4D 69 63 72 6F 20 46 6F 63 75 73 20 56 53 20 43"
+  .mar:
+    signatures:
+      - description: "MAR archive"
+        hexdump: "4D 41 52 80"
+      - description: "MAr compressed archive"
+        hexdump: "4D 41 72 30 00"
+      - description: "(/MSN) Microsoft MARC archive"
+        hexdump: "4D 41 52 43"
+      - description: "Mozilla ARchive"
+        hexdump: "4D 41 52 31 00"
+  .sbx:
+    signatures:
+      - description: "(gen) SeqBox container"
+        hexdump: "53 42 78"
+      - description: "(v1) SeqBox container"
+        hexdump: "53 42 78 01"
+  .tar:
+    signatures:
+      - description: "QNX TaRx archive"
+        hexdump: "54 61 52 78"
+      - description: "POSIX tar archive (GNU)"
+        hexdump: "75 73 74 61 72"
+        offset: 257
+compressOnly:
+  .br:
+    signatures: []
+  .bz2:
+    signatures:
+      - description: "(old) bzip2 compressed archive"
+        hexdump: "42 5A 30"
+      - description: "bzip2 compressed archive"
+        hexdump: "42 5A 68"
+  .F:
+    signatures:
+      - description: "(v1.x) Freeze compressed data"
+        hexdump: "1F 9E"
+      - description: "(v2.x) Freeze compressed data"
+        hexdump: "1F 9F"
+  .?XF:
+    signatures: []
+  .genozip:
+    signatures:
+      - description: "Genozip compressed"
+        hexdump: "27 05 20 12"
+  .gz:
+    signatures:
+      - description: "(v1.0) beddit compressed data"
+        hexdump: "62 65 64 64 69 74 2D 63 6F 6D 70 72 65 73 73 65"
+      - description: "GZipped data"
+        hexdump: "1F 8B 08"
+      - description: "LaserGRBL ZippedButtons"
+        hexdump: "3C 21 2D 2D 20 52 65 6D 6F 74 69 6E 67 42 61 73"
+  .lz:
+    signatures:
+      - description: "LZIP compressed archive"
+        hexdump: "4C 5A 49 50"
+  .lz4:
+    signatures:
+      - description: "LZ4 ( ) compressed stream Mozilla"
+        hexdump: "6D 6F 7A 4A 53 53 43 4C 7A 34 30 76 30 30 31 00"
+      - description: "LZ4 (old) compressed stream"
+        hexdump: "02 21 4C 18"
+      - description: "LZ4 (v1) compressed stream"
+        hexdump: "03 21 4C 18"
+      - description: "LZ4 compressed stream"
+        hexdump: "04 22 4D 18"
+  .lzma:
+    signatures:
+      - description: "LZMA compressed archive"
+        hexdump: "5D 00 00"
+      - description: "LZMA compressed Tape ARchive"
+        hexdump: "5D 00 00"
+  .lzo:
+    signatures:
+      - description: "lzop compressed"
+        hexdump: "89 4C 5A 4F 00 0D 0A 1A"
+  .rz:
+    signatures:
+      - description: "rzip compressed archive"
+        hexdump: "52 5A 49 50"
+  .sfark:
+    signatures: []
+  .sz:
+    signatures:
+      - description: "( ) Snzip compressed framing format"
+        hexdump: "FF 06 00 73 4E 61 50 70 59"
+      - description: "( ) Snzip compressed framing2 format"
+        hexdump: "FF 06 00 00 73 4E 61 50 70 59"
+      - description: "Sunzip compressed data"
+        hexdump: "53 5A"
+  .?Q?:
+    signatures: []
+  .?Z?:
+    signatures: []
+  .xz:
+    signatures:
+      - description: "xz compressed container"
+        hexdump: "FD 37 7A 58 5A 00"
+  .z:
+    signatures:
+      - description: "Compress compressed data"
+        hexdump: "1F 9D"
+      - description: "Z InstallShield archive"
+        hexdump: "13 5D 65 8C 3A 01 02 00"
+      - description: "(old) Pack compressed data"
+        hexdump: "1F 1F"
+      - description: "Pack compressed data"
+        hexdump: "1F 1E"
+      - description: "Quasijarus Strong Compression compressed data"
+        hexdump: "1F A1"
+      - description: "SCO LZH compress compressed data"
+        hexdump: "1F A0"
+      - description: "UNIX Compressed data"
+        hexdump: "1F 9D 90"
+  .Z:
+    signatures:
+      - description: "Compress compressed data"
+        hexdump: "1F 9D"
+      - description: "Z InstallShield archive"
+        hexdump: "13 5D 65 8C 3A 01 02 00"
+      - description: "(old) Pack compressed data"
+        hexdump: "1F 1F"
+      - description: "Pack compressed data"
+        hexdump: "1F 1E"
+      - description: "Quasijarus Strong Compression compressed data"
+        hexdump: "1F A1"
+      - description: "SCO LZH compress compressed data"
+        hexdump: "1F A0"
+      - description: "UNIX Compressed data"
+        hexdump: "1F 9D 90"
+  .zst:
+    signatures:
+      - description: "Zstandard compressed data"
+        hexdump: "28 B5 2F FD"
+  .??_:
+    signatures: []
+archiveAndCompress:
+  .7z:
+    signatures:
+      - description: "7-Zip (gen) compressed archive"
+        hexdump: "37 7A BC AF 27 1C"
+      - description: "7-Zip (v0.4) compressed archive"
+        hexdump: "37 7A BC AF 27 1C 00 04"
+  .s7z:
+    signatures: []
+  .aar:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+      - description: "( ) Apple Archive generic"
+        hexdump: "70 62 7A"
+      - description: "(LZ4) Apple Archive"
+        hexdump: "70 62 7A 34"
+      - description: "( ) Apple Archive LZFSE"
+        hexdump: "70 62 7A 65"
+      - description: "( ) Apple Archive LZMA"
+        hexdump: "70 62 7A 78"
+      - description: "(raw) Apple Archive"
+        hexdump: "41 41 30 31"
+      - description: "( ) Apple Archive zlib"
+        hexdump: "70 62 7A 7A"
+  .ace:
+    signatures: []
+  .afa:
+    signatures:
+      - description: "Astrotite compressed archive"
+        hexdump: "41 53 54 56 53 41"
+  .alz:
+    signatures:
+      - description: "ALZip compressed archive"
+        hexdump: "41 4C 5A 01"
+  .apk:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .arc:
+    signatures:
+      - description: "Acorn Spark Archive"
+        hexdump: "1A"
+      - description: "ArcMac compressed archive"
+        hexdump: "1B"
+      - description: "Bandai Namco game data archive"
+        hexdump: "41 52 43 43 08 00"
+      - description: "May Cry 4 Devil game data archive"
+        hexdump: "41 52 43 00 17 00 00 00"
+      - description: "EZBIND archive"
+        hexdump: "45 5A 42 49 4E 44"
+      - description: "FreeArc compressed archive"
+        hexdump: "41 72 43 01"
+      - description: "ARC Internet Archive File Format"
+        hexdump: "66 69 6C 65 64 65 73 63 3A 2F 2F"
+      - description: ": 2 Madagascar Escape Africa game data archive"
+        hexdump: "49 47 41 1A"
+      - description: "Mii Maker data archive"
+        hexdump: "53 41 52 43"
+      - description: "Nintendo Yaz0 compressed data"
+        hexdump: "59 61 7A 30"
+      - description: "PAK/ARC Compressed archive"
+        hexdump: "1A"
+      - description: ": Silent Hill Origins game data archive"
+        hexdump: "41 32 2E 30"
+      - description: "Xexor disk image"
+        hexdump: "58 41"
+  .ark:
+    signatures:
+      - description: "DS Squeeze archive"
+        hexdump: "00 49 44 46 55 47 48 54 41 D5 02"
+      - description: "Fold compressed archive"
+        hexdump: "46 41 52 43 31"
+      - description: "QuArk compressed archive"
+        hexdump: "37 04 10 00"
+  .arc:
+    signatures:
+      - description: "Acorn Spark Archive"
+        hexdump: "1A"
+      - description: "ArcMac compressed archive"
+        hexdump: "1B"
+      - description: "Bandai Namco game data archive"
+        hexdump: "41 52 43 43 08 00"
+      - description: "May Cry 4 Devil game data archive"
+        hexdump: "41 52 43 00 17 00 00 00"
+      - description: "EZBIND archive"
+        hexdump: "45 5A 42 49 4E 44"
+      - description: "FreeArc compressed archive"
+        hexdump: "41 72 43 01"
+      - description: "ARC Internet Archive File Format"
+        hexdump: "66 69 6C 65 64 65 73 63 3A 2F 2F"
+      - description: ": 2 Madagascar Escape Africa game data archive"
+        hexdump: "49 47 41 1A"
+      - description: "Mii Maker data archive"
+        hexdump: "53 41 52 43"
+      - description: "Nintendo Yaz0 compressed data"
+        hexdump: "59 61 7A 30"
+      - description: "PAK/ARC Compressed archive"
+        hexdump: "1A"
+      - description: ": Silent Hill Origins game data archive"
+        hexdump: "41 32 2E 30"
+      - description: "Xexor disk image"
+        hexdump: "58 41"
+  .cdx:
+    signatures:
+      - description: "CDX Internet Archive index"
+        hexdump: "43 44 58 20"
+      - description: "( ) CorelDraw compressed format generic"
+        hexdump: "43 44 52 43 4F 4D 50"
+  .arj:
+    signatures:
+      - description: "ARJ compressed archive"
+        hexdump: "60 EA"
+  .b1:
+    signatures:
+      - description: "B1 compressed archive"
+        hexdump: "62 31 3A"
+  .b6z:
+    signatures:
+      - description: "B6Zip compressed archive"
+        hexdump: "42 36 03 04"
+  .ba:
+    signatures:
+      - description: "Scifer Archiver compressed Binary Archive"
+        hexdump: "AC EA FA CE"
+  .bh:
+    signatures:
+      - description: "BlackHole compressed archive"
+        hexdump: "42 48 05 07"
+  .cab:
+    signatures:
+      - description: "( ) InstallShield Compressed Archive generic"
+        hexdump: "49 53 63 28"
+      - description: "Microsoft Cabinet Archive"
+        hexdump: "4D 53 43 46 00 00 00 00"
+      - description: "CE Microsoft Windows installation Cabinet Archive"
+        hexdump: "4D 53 43 46 00 00 00 00"
+  .car:
+    signatures:
+      - description: "Biosym archive"
+        hexdump: "21 42 49 4F 53 59 4D 20 61 72 63 68 69 76 65 20"
+      - description: "CAR compressed archive"
+        hexdump: "1F"
+      - description: "Compressia Archive"
+        hexdump: "43 4D 50 30 43 4D 50 31"
+      - description: "(v2) Content Addressable Archive"
+        hexdump: "0A A1 67 76 65 72 73 69 6F 6E 02"
+      - description: "Royal Heroes game data archive"
+        hexdump: "72 61 63 31"
+  .cfs:
+    signatures: []
+  .cpt:
+    signatures:
+      - description: "Pro Compact compressed archive"
+        hexdump: "01 01"
+      - description: "Mac Pro Compact archive"
+        hexdump: "00"
+  .dar:
+    signatures:
+      - description: "Dar archive"
+        hexdump: "00 00 00 7B"
+  .dd:
+    signatures:
+      - description: "DiskDoubler compressed data"
+        hexdump: "AB CD 00 54"
+  .dgc:
+    signatures:
+      - description: "G DGCA Digital Codec Archiver"
+        hexdump: "44 47 43 41"
+  .dmg:
+    signatures:
+      - description: "Map (APM) Apple Partition disk image"
+        hexdump: "45 52"
+      - description: "(BZ2 ) Macintosh Disk image compressed"
+        hexdump: "42 5A 68"
+      - description: "( ) Macintosh Disk image BZlib compressed"
+        hexdump: "78"
+      - description: "(v1) Macintosh encrypted Disk image"
+        hexdump: "63 64 73 61 65 6E 63 72"
+      - description: "(v2) Macintosh encrypted Disk image"
+        hexdump: "65 6E 63 72 63 64 73 61"
+  .ear:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .gca:
+    signatures:
+      - description: "G Compression Archiver"
+        hexdump: "47 43 41 58"
+  .genozip:
+    signatures:
+      - description: "Genozip compressed"
+        hexdump: "27 05 20 12"
+  .ha:
+    signatures:
+      - description: "HA compressed archive"
+        hexdump: "48 41"
+  .hki:
+    signatures:
+      - description: "WinHki compressed archive"
+        hexdump: "61 5C 04 05 14 41 00 00 FD 00"
+  .ice:
+    signatures:
+      - description: "! Freeze compressed archive"
+        hexdump: "46 52"
+      - description: "ICE compressed archive"
+        hexdump: "49 43 01 02 01 00"
+  .jar:
+    signatures:
+      - description: "JARCS compressed archive"
+        hexdump: "4A 41 52 43 53 00"
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .kgb:
+    signatures:
+      - description: "KGB (old) Archiver compressed archive"
+        hexdump: "4B 47 42 32"
+      - description: "KGB Archiver compressed archive"
+        hexdump: "4B 47 42 5F 61 72 63 68 20 2D"
+  .lzh:
+    signatures: []
+  .lha:
+    signatures: []
+  .lzx:
+    signatures:
+      - description: "LZX Amiga compressed archive"
+        hexdump: "4C 5A 58 00"
+  .pak:
+    signatures:
+      - description: "10tons game data archive"
+        hexdump: "50 41 4B 00 56 31 31 00"
+      - description: "Absolute Terror game data archive"
+        hexdump: "50 41 4B 34"
+      - description: "Age of Alexander game data archive"
+        hexdump: "50 41 4B 20 00 00 0B 00"
+      - description: "Artisoft installation Package"
+        hexdump: "41 52 54 49 50 41 43 4B"
+      - description: "2 Battlezone game data package"
+        hexdump: "44 4F 43 50 01 00 00 00"
+      - description: "BitRock installation Package"
+        hexdump: "42 69 74 52 6F 63 6B 50 61 6B"
+      - description: "(PC) Blur game data Package"
+        hexdump: "32 4B 41 50"
+      - description: "Of : Call Duty Finest Hour game data archive"
+        hexdump: "53 70 61 72 6B 20 50 61 63 6B 20 28 43 29 32 30"
+      - description: "(v5, ) Chromium PACK resource archive binary"
+        hexdump: "05 00 00 00 00 00 00 00"
+      - description: "(v5, UTF-16) Chromium PACK resource archive"
+        hexdump: "05 00 00 00 02 00 00 00"
+      - description: "(v5, UTF-8) Chromium PACK resource archive"
+        hexdump: "05 00 00 00 01 00 00 00"
+      - description: "Dragon Mania Legends game data archive"
+        hexdump: "42 55 44 00"
+      - description: "Eyedentity Games Packing game data archive"
+        hexdump: "45 79 65 64 65 6E 74 69 74 79 47 61 6D 65 73 20"
+      - description: ". FoxPro compressed dist archive"
+        hexdump: "46 50 41 4B"
+      - description: "Free Radical P4CK game data archive"
+        hexdump: "50 34 43 4B"
+      - description: "Free Radical P8CK game data archive"
+        hexdump: "50 38 43 4B"
+      - description: "3 Gothic game data archive"
+        hexdump: "00 00 00 00 47 33 56 30 00 00 00 00 00 00 00 00"
+      - description: "HBuilder language package"
+        hexdump: "04 00 00 00"
+      - description: "IGP game data archive"
+        hexdump: "49 47 50 1A"
+      - description: "Mech Commander game data archive"
+        hexdump: "CE FA ED FE"
+      - description: "All- Namco Stars game data archive"
+        hexdump: "52 57 50 41 43 4B"
+      - description: "OS/2 / installation package archive"
+        hexdump: "A5 96 FE FF"
+      - description: "2: Pacific Warrior Dogfight game data archive"
+        hexdump: "50 41 4B 00"
+      - description: "Package Builder game data archive"
+        hexdump: "05 24 50 41 4B 24"
+      - description: "/PFT (v2.0) PACKED compressed archive"
+        hexdump: "00 50 00 14"
+      - description: "/PFT (v3.0) PACKED compressed archive"
+        hexdump: "00 50 00 1E"
+      - description: "PAK/ARC Compressed archive"
+        hexdump: "1A"
+      - description: "Quake archive"
+        hexdump: "50 41 43 4B"
+      - description: "Quantum compressed archive"
+        hexdump: "44 53 00"
+      - description: "Risen game data archive"
+        hexdump: "01 00 00 00 47 33 56 30 00 00 00 00 00 00 00 00"
+      - description: "Rising Kingdoms game data archive"
+        hexdump: "48 4D 4D 53 59 53 20 50 61 63 6B 46 69 6C 65 0A"
+      - description: "Simutrans object package"
+        hexdump: "53 69 6D 75 74 72 61 6E 73 20 6F 62 6A 65 63 74"
+      - description: "Spellbound game data archive"
+        hexdump: "53 42 50 41 4B 20 56 20 31 2E 30 0D 0A"
+      - description: "SpellForce game data archive"
+        hexdump: "04 00 00 00 4D 41 53 53 49 56 45 20 50 41 4B 46"
+      - description: ": , , ! SpongeBob SquarePants Lights Camera Pants game data archive"
+        hexdump: "6B 63 61 70 01 00 00 00"
+      - description: "Starbound game data archive"
+        hexdump: "53 42 41 73 73 65 74 36"
+      - description: "Storm Region game data archive"
+        hexdump: "53 72 1A 1C 0D 0A 87 0A"
+      - description: "Time Splitters Future Perfect game data archive"
+        hexdump: "50 35 43 4B"
+      - description: "Touhou game data archive"
+        hexdump: "54 46 50 4B"
+      - description: "( ) TSComp compressed data multi"
+        hexdump: "65 5D 13 8C 08 01 03 00 02 00 00 00 00 12"
+      - description: "- Recursion Real Time Stat Tracker Package"
+        hexdump: "0A"
+  .partimg:
+    signatures: []
+  .paq6:
+    signatures: []
+  .paq7:
+    signatures: []
+  .paq8:
+    signatures: []
+  .pea:
+    signatures:
+      - description: "PEA (v1.x) compressed archive"
+        hexdump: "EA 01"
+      - description: "PEA (v2.x) compressed archive"
+        hexdump: "EA 02"
+  .phar:
+    signatures: []
+  .pim:
+    signatures:
+      - description: "( ) Beam Software SIFF container generic"
+        hexdump: "53 49 46 46"
+      - description: "PIM (v2) compressed archive"
+        hexdump: "50 49 4D 32"
+      - description: "(v1) PIMPLE compressed data"
+        hexdump: "01 50 49 4D"
+      - description: "(v2) PIMPLE compressed data"
+        hexdump: "02 50 49 4D"
+  .pit:
+    signatures:
+      - description: "PackIt compressed archive"
+        hexdump: "50 4D 61"
+  .qda:
+    signatures:
+      - description: "the Akuji Demon game data archive"
+        hexdump: "51 44 41 30"
+  .rar:
+    signatures:
+      - description: "RAR (gen) compressed archive"
+        hexdump: "52 61 72 21 1A"
+      - description: "RAR (v-4.x) compressed archive"
+        hexdump: "52 61 72 21 1A 07 00"
+      - description: "RAR (v1.x) compressed archive"
+        hexdump: "52 45 7E 5E"
+      - description: "RAR (v5.0) compressed archive"
+        hexdump: "52 61 72 21 1A 07 01 00"
+  .rk:
+    signatures:
+      - description: "RK compressed archive"
+        hexdump: "AA 04 00 00 00 00 AD BB DA 04 00 00 00"
+  .sda:
+    signatures:
+      - description: "- (var.1) Self Dissolving compressed Archive"
+        hexdump: "01 08 0D 08"
+      - description: "- (var.2) Self Dissolving compressed Archive"
+        hexdump: "01 1C 0D 1C 0F 00 9E 28 32 30 36 33 29 00 00 00"
+  .sea:
+    signatures:
+      - description: "- - DDA2 Self Extracting Archive"
+        hexdump: "44 44 41 32 00 3E 00 01 00"
+      - description: "Mac - StuffIt Self Extracting Archive"
+        hexdump: "00"
+  .sen:
+    signatures:
+      - description: "Scifer Archiver compressed Binary Archive"
+        hexdump: "AC EA FA CE"
+  .sfx:
+    signatures:
+      - description: "Red : The Comrades Save Galaxy game data archive"
+        hexdump: "53 74 4F 52"
+      - description: "- LHA Self Extracting Archive"
+        hexdump: "01"
+  .shk:
+    signatures:
+      - description: "NuFX archive"
+        hexdump: "4E F5 46 E9 6C E5"
+  .sit:
+    signatures:
+      - description: "Mac ( ) StuffIt Deluxe archive MacBinary"
+        hexdump: "00"
+      - description: "(var. ) StuffIt compressed archive ST46"
+        hexdump: "53 54 34 36"
+      - description: "(var. ) StuffIt compressed archive ST50"
+        hexdump: "53 54 35 30"
+      - description: "(var. ) StuffIt compressed archive ST60"
+        hexdump: "53 54 36 30"
+      - description: "(var. ) StuffIt compressed archive ST65"
+        hexdump: "53 54 36 35"
+      - description: "(var. ) StuffIt compressed archive STi2"
+        hexdump: "53 54 69 32"
+      - description: "(var. ) StuffIt compressed archive STi3"
+        hexdump: "53 54 69 33"
+      - description: "(var. ) StuffIt compressed archive STi4"
+        hexdump: "53 54 69 34"
+      - description: "(var. ) StuffIt compressed archive STin"
+        hexdump: "53 54 69 6E"
+      - description: "(var.2) StuffIt compressed archive"
+        hexdump: "53 49 54 21 00"
+      - description: "( ) StuffIt compressed archive with MacBinary header"
+        hexdump: "00"
+      - description: "StuffIt compressed archive"
+        hexdump: "53 74 75 66 66 49 74 20 28 63 29 31 39 39 37 2D"
+  .sitx:
+    signatures:
+      - description: "X StuffIt compressed archive"
+        hexdump: "53 74 75 66 66 49 74 21"
+  .sqx:
+    signatures: []
+  .tar.gz:
+    signatures: []
+  .tgz:
+    signatures: []
+  .tar.Z:
+    signatures: []
+  .tar.bz2:
+    signatures: []
+  .tbz2:
+    signatures: []
+  .tar.lz:
+    signatures: []
+  .tlz:
+    signatures:
+      - description: "LZMA compressed Tape ARchive"
+        hexdump: "5D 00 00"
+  .tar.xz:
+    signatures: []
+  .txz:
+    signatures: []
+  .tar.zst:
+    signatures: []
+  .uc:
+    signatures: []
+  .uc0:
+    signatures: []
+  .uc2:
+    signatures:
+      - description: "2 UltraCompressor Archive"
+        hexdump: "55 43 32 1A"
+  .ucn:
+    signatures: []
+  .ur2:
+    signatures: []
+  .ue2:
+    signatures:
+      - description: "2 UltraCompressor Encrypted archive"
+        hexdump: "55 45 32 53 1A"
+  .uca:
+    signatures: []
+  .uha:
+    signatures:
+      - description: "UHARC compressed archive"
+        hexdump: "55 48 41"
+  .war:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+      - description: "Westwood game data Archive"
+        hexdump: "57 41 52 43"
+  .wim:
+    signatures: []
+  .xar:
+    signatures:
+      - description: "XAR Archive"
+        hexdump: "78 61 72 21"
+  .xp3:
+    signatures:
+      - description: "KiriKiri Adventure Game System package"
+        hexdump: "58 50 33 0D 0A 20 0A 1A 8B 67"
+  .yz1:
+    signatures:
+      - description: "Yamazaki Zipper compressed archive"
+        hexdump: "79 7A"
+  .zip:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+      - description: "TorrentZip compressed archive"
+        hexdump: "50 4B 03 04 14 00 02 00 08 00 00 BC 98 21"
+      - description: "ZIP ( ) compressed archive empty"
+        hexdump: "50 4B 05 06"
+      - description: "ZIP ( ) compressed archive multivolume"
+        hexdump: "50 4B 07 08"
+      - description: "Pro ZIP ZLock encrypted"
+        hexdump: "50 4B 03 04 14 00 01 00 63 00 00 00 00 00"
+  .zipx:
+    signatures: []
+  .zoo:
+    signatures:
+      - description: "ZOO compressed archive"
+        hexdump: "5A 4F 4F 20"
+  .zpaq:
+    signatures:
+      - description: "(old) zpaq compressed archive"
+        hexdump: "7A 50 51"
+      - description: "zpaq compressed archive"
+        hexdump: "37 6B 53 74"
+  .zz:
+    signatures:
+      - description: "Zzip compressed archive"
+        hexdump: "5A 5A 31"
+dataRecovery:
+  .ecc:
+    signatures: []
+  .ecsbx:
+    signatures: []
+  .fec:
+    signatures: []
+  .par:
+    signatures:
+      - description: "PAR compressed archive"
+        hexdump: "50 41 52 00"
+      - description: "Set ( ) Parity Archive Volume Par1"
+        hexdump: "50 41 52 00 00 00 00 00"
+  .par2:
+    signatures:
+      - description: "Set ( ) Parity Archive Volume Par2"
+        hexdump: "50 41 52 32 00 50 4B 54"
+  .rev:
+    signatures: []
+packaging:
+  .appx:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .appxbundle:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .crx:
+    signatures:
+      - description: "LS Links game data archive"
+        hexdump: "4C 53 49 73"
+  .deb:
+    signatures:
+      - description: "Debian Linux Package"
+        hexdump: "21 3C 61 72 63 68 3E 0A 64 65 62 69 61 6E 2D 62"
+  .emsix:
+    signatures: []
+  .emsixbundle:
+    signatures: []
+  .esd:
+    signatures: []
+  .mpkg:
+    signatures: []
+  .msi:
+    signatures:
+      - description: "Microsoft Windows Installer"
+        hexdump: "D0 CF 11 E0 A1 B1 1A E1"
+  .msix:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .msixbundle:
+    signatures:
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .pkg:
+    signatures:
+      - description: "BeOS installation package"
+        hexdump: "41 6C 42 1A FF 0A 0D 00 50 68 49 6E 00 00 04 46"
+      - description: "FinalBuilder actions Package"
+        hexdump: "3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31"
+      - description: "I- DEAS Package"
+        hexdump: "23 20 20"
+      - description: "IAFA Package info"
+        hexdump: "54 69 74 6C 65 3A 20 20 20 20 20 20 20 20 20 20"
+      - description: "War 2 mod Independence Package"
+        hexdump: "46 4F 52 4D"
+      - description: "InstallShield compiled setup Package"
+        hexdump: "4A A3"
+      - description: "( ) Newton Package generic"
+        hexdump: "70 61 63 6B 61 67 65"
+      - description: "(NOS v1.x) Newton Package"
+        hexdump: "70 61 63 6B 61 67 65 30 78 78 78 78"
+      - description: "(NOS v2.x) Newton Package"
+        hexdump: "70 61 63 6B 61 67 65 31 78 78 78 78"
+      - description: "of War Order game data archive"
+        hexdump: "50 00 4B 00 47 00 5F 00 46 00 49 00 4C 00 45 00"
+      - description: "OS/2 ( rem) install Package with"
+        hexdump: "2A 2A 2A 2A"
+      - description: "OS/2 / installation package archive"
+        hexdump: "A5 96 FE FF"
+      - description: "Outerra Package"
+        hexdump: "45 4F 50 47"
+      - description: "Psychonauts game data archive"
+        hexdump: "5A 50 4B 47"
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+      - description: "PS ( ) Sony Package generic"
+        hexdump: "7F 50 4B 47"
+      - description: "PS3 ( ) Sony Package debug"
+        hexdump: "7F 50 4B 47 00 00 00 01"
+      - description: "PS3 ( / ) Sony Package finalized retail"
+        hexdump: "7F 50 4B 47 80 00 00 01"
+      - description: "PSP/ ( ) Sony PSVita Package debug"
+        hexdump: "7F 50 4B 47 00 00 00 02"
+      - description: "PSP/ ( / ) Sony PSVita Package finalized retail"
+        hexdump: "7F 50 4B 47 80 00 00 02"
+      - description: "Sun SVR4 package data stream"
+        hexdump: "23 20 50 61 43 6B 41 67 45 20 44 61 54 61 53 74"
+      - description: "80 / UniComal COMAL Package module"
+        hexdump: "CD 20 43 4F 4D 41 4C 2D 4D 4F 44 55 4C 45"
+      - description: "Wallpaper Engine Scene Package"
+        hexdump: "08 00 00 00 50 4B 47 56"
+      - description: "XAR Archive"
+        hexdump: "78 61 72 21"
+  .pkg.tar:
+    signatures: []
+  .pkg.tar.zst:
+    signatures: []
+  .rpm:
+    signatures:
+      - description: "RPM ( ) Package generic"
+        hexdump: "ED AB EE DB"
+      - description: "RPM (v3.0 ) Package source"
+        hexdump: "ED AB EE DB 03 00 00 01 00"
+      - description: "RPM (src.rpm) Package source"
+        hexdump: "ED AB EE DB"
+containers:
+  .arc:
+    signatures:
+      - description: "Acorn Spark Archive"
+        hexdump: "1A"
+      - description: "ArcMac compressed archive"
+        hexdump: "1B"
+      - description: "Bandai Namco game data archive"
+        hexdump: "41 52 43 43 08 00"
+      - description: "May Cry 4 Devil game data archive"
+        hexdump: "41 52 43 00 17 00 00 00"
+      - description: "EZBIND archive"
+        hexdump: "45 5A 42 49 4E 44"
+      - description: "FreeArc compressed archive"
+        hexdump: "41 72 43 01"
+      - description: "ARC Internet Archive File Format"
+        hexdump: "66 69 6C 65 64 65 73 63 3A 2F 2F"
+      - description: ": 2 Madagascar Escape Africa game data archive"
+        hexdump: "49 47 41 1A"
+      - description: "Mii Maker data archive"
+        hexdump: "53 41 52 43"
+      - description: "Nintendo Yaz0 compressed data"
+        hexdump: "59 61 7A 30"
+      - description: "PAK/ARC Compressed archive"
+        hexdump: "1A"
+      - description: ": Silent Hill Origins game data archive"
+        hexdump: "41 32 2E 30"
+      - description: "Xexor disk image"
+        hexdump: "58 41"
+  .cpt:
+    signatures:
+      - description: "Pro Compact compressed archive"
+        hexdump: "01 01"
+      - description: "Mac Pro Compact archive"
+        hexdump: "00"
+  .dar:
+    signatures:
+      - description: "Dar archive"
+        hexdump: "00 00 00 7B"
+  .dgc:
+    signatures:
+      - description: "G DGCA Digital Codec Archiver"
+        hexdump: "44 47 43 41"
+  .dmg:
+    signatures:
+      - description: "Map (APM) Apple Partition disk image"
+        hexdump: "45 52"
+      - description: "(BZ2 ) Macintosh Disk image compressed"
+        hexdump: "42 5A 68"
+      - description: "( ) Macintosh Disk image BZlib compressed"
+        hexdump: "78"
+      - description: "(v1) Macintosh encrypted Disk image"
+        hexdump: "63 64 73 61 65 6E 63 72"
+      - description: "(v2) Macintosh encrypted Disk image"
+        hexdump: "65 6E 63 72 63 64 73 61"
+  .ima:
+    signatures:
+      - description: "Distribution Media Format disk image"
+        hexdump: "EB 3C 90"
+      - description: "Old DOS disk image"
+        hexdump: "E9"
+  .img:
+    signatures:
+      - description: "( ) Bochs disk image generic"
+        hexdump: "42 6F 63 68 73 20 56 69 72 74 75 61 6C 20 48 44"
+      - description: "Bochs growing disk image"
+        hexdump: "42 6F 63 68 73 20 56 69 72 74 75 61 6C 20 48 44"
+      - description: "Bochs sparse disk image"
+        hexdump: "CE 8A 46 02"
+      - description: "( ) Brother Word Processors disk image 240K"
+        hexdump: "89 85 1E 11"
+      - description: "( ) Brother WP1a disk image 240KB"
+        hexdump: "EB FE 90 42 44 4F 53 56 32 35 30"
+      - description: "( ) Brother WP1a disk image 720KB"
+        hexdump: "EB FE 90 42 44 4F 53 56 37 32 30"
+      - description: "CP/M non- bootable disk image"
+        hexdump: "E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5 E5"
+      - description: "for DOS (v1.x) Disk Image disk Image"
+        hexdump: "64 69 6D 67 31"
+      - description: "Distribution Media Format disk image"
+        hexdump: "EB 3C 90"
+      - description: "(80t/15s) DOSIMG disk image"
+        hexdump: "4F 0F 01"
+      - description: "(80t/18s) DOSIMG disk image"
+        hexdump: "4F 12 01"
+      - description: "eXtended Density Format disk image"
+        hexdump: "EB 4F 90"
+      - description: "FDIMAGE disk image"
+        hexdump: "46 44 49 4D 41 47 45 1A"
+      - description: "Floppy Diskette Copy disk image"
+        hexdump: "46 6C 6F 70 70 79 20 44 69 73 6B 65 74 74 65 20"
+      - description: "FM Towns bootable disk image"
+        hexdump: "49 50 4C"
+      - description: "Img ( ) Garmin Mapsource actual compressed maps"
+        hexdump: "96 96 96 96 96 96 96 96 96 96"
+      - description: "PC ( ) Generic disk image NTFS"
+        hexdump: "EB 52 90 4E 54 46 53 20 20 20 20"
+      - description: ": San Grand Theft Auto Andreas game data archive"
+        hexdump: "56 45 52 32"
+      - description: "HD- Copy disk image"
+        hexdump: "FF 18 07"
+      - description: "Hi-MD Minidisc disk image"
+        hexdump: "E9 00"
+      - description: "LILO bootloader disk image"
+        hexdump: "EB 5D 4C 49 4C 4F"
+      - description: "( ) LUKS encrypted disk image generic"
+        hexdump: "4C 55 4B 53 BA BE"
+      - description: "(v1) LUKS encrypted disk image"
+        hexdump: "4C 55 4B 53 BA BE 00 01"
+      - description: "(v2) LUKS encrypted disk image"
+        hexdump: "4C 55 4B 53 BA BE 00 02"
+      - description: "MIT CADR Lisp Machine disk image"
+        hexdump: "4C 41 42 4C"
+      - description: "NeXT disk image"
+        hexdump: "64 6C 56 33 00 00 00 00 00 00 00 00"
+      - description: "Old DOS disk image"
+        hexdump: "E9"
+      - description: "DOS Paragon disk image"
+        hexdump: "EB"
+      - description: "Partimage disk image"
+        hexdump: "50 61 52 74 49 6D 41 67 45 2D 56 6F 4C 75 4D 65"
+      - description: "Pax : Imperia Eminent Domain game data archive"
+        hexdump: "49 49 01 00 00 00"
+      - description: "Pro Evolution Soccer 2010 game data archive"
+        hexdump: "41 46 53 00"
+      - description: "PTS-DOS disk image"
+        hexdump: "EB"
+      - description: "(gen) QCOW disk image"
+        hexdump: "51 46 49 FB"
+      - description: "QCOW1 disk image"
+        hexdump: "51 46 49 FB 00 00 00 01"
+      - description: "QCOW2 disk image"
+        hexdump: "51 46 49 FB 00 00 00 02"
+      - description: "QCOW3 disk image"
+        hexdump: "51 46 49 FB 00 00 00 03"
+      - description: "QL (DS/DD) QDOS floppy disk image"
+        hexdump: "51 4C 35 41"
+      - description: "QL (DS/HD) QDOS floppy disk image"
+        hexdump: "51 4C 35 42"
+      - description: "QNX volume disk image"
+        hexdump: "76 6F 6C 20"
+      - description: "RC579 PICCOLINE disk image"
+        hexdump: "52 43 37 35 39 20"
+      - description: "RC750 PICCOLINE disk image"
+        hexdump: "52 43 37 35 30 20"
+      - description: "The Duplicator Toolkit disk image"
+        hexdump: "49 6D 61 67 65 20 66 69 6C 65 20 6F 66 20 61 20"
+      - description: "(1 ) TransCopy disk image side"
+        hexdump: "5A A5"
+      - description: "(2 ) TransCopy disk image sides"
+        hexdump: "5A A5"
+      - description: "Xerox Star hard disk image"
+        hexdump: "02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+      - description: "ZealFS disk image"
+        hexdump: "5A 01"
+  .iso:
+    signatures:
+      - description: "Map (APM) Apple Partition disk image"
+        hexdump: "45 52"
+      - description: "ISO 9660 Volume Descriptor"
+        hexdump: "43 44 30 30 31"
+        offset: 32769
+  .jar:
+    signatures:
+      - description: "JARCS compressed archive"
+        hexdump: "4A 41 52 43 53 00"
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+  .lha:
+    signatures: []
+  .lpaq#*:
+    signatures: []
+  .lzh:
+    signatures: []
+  .lzx:
+    signatures:
+      - description: "LZX Amiga compressed archive"
+        hexdump: "4C 5A 58 00"
+  .mou:
+    signatures:
+      - description: "WinMount archive"
+        hexdump: "4D 4F 55 00 00 00 00 00 00 00 05 00"
+  .paq#*:
+    signatures: []
+  .partimg:
+    signatures: []
+  .pea:
+    signatures:
+      - description: "PEA (v1.x) compressed archive"
+        hexdump: "EA 01"
+      - description: "PEA (v2.x) compressed archive"
+        hexdump: "EA 02"
+  .pim:
+    signatures:
+      - description: "( ) Beam Software SIFF container generic"
+        hexdump: "53 49 46 46"
+      - description: "PIM (v2) compressed archive"
+        hexdump: "50 49 4D 32"
+      - description: "(v1) PIMPLE compressed data"
+        hexdump: "01 50 49 4D"
+      - description: "(v2) PIMPLE compressed data"
+        hexdump: "02 50 49 4D"
+  .qda:
+    signatures:
+      - description: "the Akuji Demon game data archive"
+        hexdump: "51 44 41 30"
+  .rar:
+    signatures:
+      - description: "RAR (gen) compressed archive"
+        hexdump: "52 61 72 21 1A"
+      - description: "RAR (v-4.x) compressed archive"
+        hexdump: "52 61 72 21 1A 07 00"
+      - description: "RAR (v1.x) compressed archive"
+        hexdump: "52 45 7E 5E"
+      - description: "RAR (v5.0) compressed archive"
+        hexdump: "52 61 72 21 1A 07 01 00"
+  .rk:
+    signatures:
+      - description: "RK compressed archive"
+        hexdump: "AA 04 00 00 00 00 AD BB DA 04 00 00 00"
+  .shk:
+    signatures:
+      - description: "NuFX archive"
+        hexdump: "4E F5 46 E9 6C E5"
+  .sit:
+    signatures:
+      - description: "Mac ( ) StuffIt Deluxe archive MacBinary"
+        hexdump: "00"
+      - description: "(var. ) StuffIt compressed archive ST46"
+        hexdump: "53 54 34 36"
+      - description: "(var. ) StuffIt compressed archive ST50"
+        hexdump: "53 54 35 30"
+      - description: "(var. ) StuffIt compressed archive ST60"
+        hexdump: "53 54 36 30"
+      - description: "(var. ) StuffIt compressed archive ST65"
+        hexdump: "53 54 36 35"
+      - description: "(var. ) StuffIt compressed archive STi2"
+        hexdump: "53 54 69 32"
+      - description: "(var. ) StuffIt compressed archive STi3"
+        hexdump: "53 54 69 33"
+      - description: "(var. ) StuffIt compressed archive STi4"
+        hexdump: "53 54 69 34"
+      - description: "(var. ) StuffIt compressed archive STin"
+        hexdump: "53 54 69 6E"
+      - description: "(var.2) StuffIt compressed archive"
+        hexdump: "53 49 54 21 00"
+      - description: "( ) StuffIt compressed archive with MacBinary header"
+        hexdump: "00"
+      - description: "StuffIt compressed archive"
+        hexdump: "53 74 75 66 66 49 74 20 28 63 29 31 39 39 37 2D"
+  .sitx:
+    signatures:
+      - description: "X StuffIt compressed archive"
+        hexdump: "53 74 75 66 66 49 74 21"
+  .swm:
+    signatures: []
+  .tgz:
+    signatures: []
+  .uc:
+    signatures: []
+  .uc0:
+    signatures: []
+  .uc2:
+    signatures:
+      - description: "2 UltraCompressor Archive"
+        hexdump: "55 43 32 1A"
+  .ucn:
+    signatures: []
+  .ue2:
+    signatures:
+      - description: "2 UltraCompressor Encrypted archive"
+        hexdump: "55 45 32 53 1A"
+  .ur2:
+    signatures: []
+  .wim:
+    signatures: []
+  .zip:
+    signatures:
+      - description: "TorrentZip compressed archive"
+        hexdump: "50 4B 03 04 14 00 02 00 08 00 00 BC 98 21"
+      - description: "ZIP ( ) compressed archive empty"
+        hexdump: "50 4B 05 06"
+      - description: "ZIP ( ) compressed archive multivolume"
+        hexdump: "50 4B 07 08"
+      - description: "ZIP compressed archive"
+        hexdump: "50 4B 03 04"
+      - description: "Pro ZIP ZLock encrypted"
+        hexdump: "50 4B 03 04 14 00 01 00 63 00 00 00 00 00"
+  .zpaq:
+    signatures:
+      - description: "(old) zpaq compressed archive"
+        hexdump: "7A 50 51"
+      - description: "zpaq compressed archive"
+        hexdump: "37 6B 53 74"
