@@ -15,5 +15,5 @@ pub fn check_magic<P: AsRef<Path>>(path: P) -> Option<ArchiveInfo> {
         Err(_) => return None,
     };
 
-    crate::check_magic_signature(&buffer[..bytes_read])
+    crate::generated::check_magic_signature(&buffer[..bytes_read])
 }

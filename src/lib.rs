@@ -2,10 +2,32 @@ use std::path::Path;
 
 pub mod magic;
 
-// Include generated code
-include!(concat!(env!("OUT_DIR"), "/extensions.rs"));
+// Encapsulate generated code
+pub(crate) mod generated {
+    include!(concat!(env!("OUT_DIR"), "/extensions.rs"));
+}
+
+pub use generated::ArchiveInfo;
 
 /// Analyzes the file and returns detailed archive info.
+///
+/// This function checks for archive signatures (magic numbers) first,
+/// and falls back to file extension checks if no magic number is found.
+///
+/// # Example
+///
+/// ```no_run
+/// use isarchive::analyze;
+/// use std::path::Path;
+///
+/// let path = Path::new("archive.zip");
+/// if let Some(info) = analyze(path) {
+///     println!("File type: {}", info.category);
+///     println!("Description: {}", info.description);
+/// } else {
+///     println!("Not an archive");
+/// }
+/// ```
 pub fn analyze<P: AsRef<Path>>(path: P) -> Option<ArchiveInfo> {
     let path = path.as_ref();
 
@@ -22,7 +44,7 @@ pub fn analyze<P: AsRef<Path>>(path: P) -> Option<ArchiveInfo> {
         // Try longest suffix first
         for i in indices {
             let suffix = &name_lower[i..];
-            if let Some(info) = get_extension_info(suffix) {
+            if let Some(info) = generated::get_extension_info(suffix) {
                 return Some(info);
             }
         }
@@ -40,7 +62,7 @@ mod tests {
     #[test]
     fn test_magic_signature_zip() {
         let zip_magic = [0x50, 0x4B, 0x03, 0x04];
-        let info = check_magic_signature(&zip_magic);
+        let info = generated::check_magic_signature(&zip_magic);
         assert!(info.is_some(), "ZIP magic should be detected");
         let info = info.unwrap();
         // The category should be one of the known archive categories
@@ -56,7 +78,7 @@ mod tests {
 
     #[test]
     fn test_extension_zip() {
-        let info = get_extension_info(".zip");
+        let info = generated::get_extension_info(".zip");
         assert!(info.is_some(), ".zip extension should be detected");
         let info = info.unwrap();
         assert!(
@@ -67,7 +89,7 @@ mod tests {
 
     #[test]
     fn test_extension_nonexistent() {
-        let info = get_extension_info(".nonexistent_extension_xyz");
+        let info = generated::get_extension_info(".nonexistent_extension_xyz");
         assert!(
             info.is_none(),
             "Non-existent extension should not be detected"
