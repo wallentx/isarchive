@@ -287,7 +287,7 @@ fn main() {
         }
     }
 
-    all_signatures.sort_by(|a, b| b.bytes.len().cmp(&a.bytes.len()));
+    all_signatures.sort_by_key(|signature| std::cmp::Reverse(signature.bytes.len()));
 
     output.push_str("pub fn check_magic_signature(data: &[u8]) -> Option<ArchiveInfo> {");
     output.push('\n');
